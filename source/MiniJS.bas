@@ -216,24 +216,7 @@ Public Sub AddCustomEventDispatch (eventName As String, detailData As Map)
     currentIndent = currentIndent + 1
     AddLine("detail: {")
     currentIndent = currentIndent + 1
-    
-	'Dim keys As List = detailData.Keys
-	'For i = 0 To keys.Size - 1
-	'    Dim key As String = keys.Get(i)
-	'    Dim value As Object = detailData.Get(key)
-	'    Dim lineEnd As String = ","
-	'    If i = keys.Size - 1 Then lineEnd = ""
-	'    
-	'    If value Is String Then
-	'        AddLine($"{key}: '${value}'${lineEnd}"$)
-	'    Else If value Is Boolean Then
-	'        Dim boolVal As String = value
-	'        AddLine($"{key}: ${boolVal}${lineEnd}"$)
-	'    Else
-	'        AddLine($"{key}: ${value}${lineEnd}"$)
-	'    End If
-	'Next
-	'Dim keySize As Int = detailData.Size
+
 	Dim nextKey As Int
 	For Each key As String In detailData.Keys
 		Dim lineEnd As String
